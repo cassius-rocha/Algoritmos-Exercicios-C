@@ -9,7 +9,7 @@ solução desenvolvida na linguagem C.
 
 A intenção da divulgação destes exercícios é compartilhar material de estudo e de prática.
 
-Caso não tenha o C instalado em seu computador, os códigos podem ser facilmente executados em [OnlineGDB](https://www.onlinegdb.com/).
+Caso não tenha o C instalado em seu computador, os códigos podem ser facilmente executados no compilador [OnlineGDB](https://www.onlinegdb.com/).
 ## As atividades abrangem os seguintes tópicos:
 - operadores relacionais e lógicos;
 - estruturas condicionais;
