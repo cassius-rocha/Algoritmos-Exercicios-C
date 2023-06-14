@@ -8,6 +8,8 @@ Dentro de cada arquivo, há o enunciado do exercício, no topo, seguido por uma
 solução desenvolvida na linguagem C.
 
 A intenção da divulgação destes exercícios é compartilhar material de estudo e de prática.
+
+Caso não tenha o C instalado em seu computador, os códigos podem ser facilmente executados em [OnlineGDB](https://www.onlinegdb.com/).
 ## As atividades abrangem os seguintes tópicos:
 - operadores relacionais e lógicos;
 - estruturas condicionais;
