@@ -3,7 +3,7 @@
 Lista de exercícios desenvolvidos durante o primeiro e o segundo semestre (em andamento) do curso de Tecnologia em Análise e Desenvolvimento de Sistemas, FATEC Ipiranga, nas disciplinas de Algoritmos, ministrada pelo professor Norton Glaser, e Programação Estruturada e Modular, conduzida pelo professor Carlos Menezes.
 
 O repositório está dividido em duas pastas, na primeira estão contidos os exercícios do primeiro semestre, na segunda, os do segundo semestre. Dentro de cada arquivo, há o enunciado do exercício, no topo, seguido por uma
-solução desenvolvida na linguagem C.
+solução desenvolvida na linguagem C. As atividades estão em ordem crescente de complexidade.
 
 A intenção da divulgação destes exercícios é compartilhar material de estudo e de prática.
 
