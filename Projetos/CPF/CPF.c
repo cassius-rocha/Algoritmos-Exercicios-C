@@ -3,46 +3,7 @@
 #include <string.h>
 #define CPF_MAX 11
 
-int digitoVerificador(int cpf[], int mult[], int N)
-{
-    int i, soma = 0, resto;
-    for(i = 0; i < N; i++)
-    {
-        soma += cpf[i] * mult[i];
-    }
-    resto = ((soma * 10) % CPF_MAX) % 10;
-    return resto;
-}
-
-bool digitosIguais(int cpf[])
-{
-    int i;
-    for(i = 0; i <= 10; i++)
-    {
-        if(cpf[0] != cpf[i]) 
-            return false;
-    }
-    return true;
-}
-
-void estadoDeOrigem(int cpf[])
-{
-    char estados[10][80]=
-    {
-        "Rio Grande do Sul",
-        "Distrito Federal, Goiás, Mato Grosso, Mato Grosso do Sul e Tocantins",
-        "Amazonas, Pará, Roraima, Amapá, Acre e Rondônia",
-        "Ceará, Maranhão e Piauí",
-        "Paraíba, Pernambuco, Alagoas e Rio Grande do Norte",
-        "Bahia e Sergipe",
-        "Minas Gerais",
-        "Rio de Janeiro e Espírito Santo",
-        "São Paulo",
-        "Paraná e Santa Catarina"
-    };
-        printf("\nEstado de origem: %s", estados[ cpf[8] ]);
-}
-
+// função para conversão da string
 void conversãoEntrada(char entrada[], int cpf[])
 {
     int i, k = CPF_MAX-1, tamanho = strlen(entrada);
@@ -62,6 +23,48 @@ void conversãoEntrada(char entrada[], int cpf[])
     
 }
 
+// função para validação dos digitos verificadores do CPF
+int digitoVerificador(int cpf[], int mult[], int N)
+{
+    int i, soma = 0, resto;
+    for(i = 0; i < N; i++)
+    {
+        soma += cpf[i] * mult[i];
+    }
+    resto = ((soma * 10) % CPF_MAX) % 10;
+    return resto;
+}
+
+// função para verificar se todos os dígitos são iguais
+bool digitosIguais(int cpf[])
+{
+    int i;
+    for(i = 0; i <= 10; i++)
+    {
+        if(cpf[0] != cpf[i]) 
+            return false;
+    }
+    return true;
+}
+
+// função para checagem do estado de emissão do CPF
+void estadoDeOrigem(int cpf[])
+{
+    char estados[10][80]=
+    {
+        "Rio Grande do Sul",
+        "Distrito Federal, Goiás, Mato Grosso, Mato Grosso do Sul e Tocantins",
+        "Amazonas, Pará, Roraima, Amapá, Acre e Rondônia",
+        "Ceará, Maranhão e Piauí",
+        "Paraíba, Pernambuco, Alagoas e Rio Grande do Norte",
+        "Bahia e Sergipe",
+        "Minas Gerais",
+        "Rio de Janeiro e Espírito Santo",
+        "São Paulo",
+        "Paraná e Santa Catarina"
+    };
+        printf("\nEstado de origem: %s", estados[ cpf[8] ]);
+}
 
 int main()
 {
