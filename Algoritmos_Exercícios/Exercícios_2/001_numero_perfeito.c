@@ -11,25 +11,33 @@ Exemplo 2: 20 não é perfeito, pois 1+2+4+5+10 = 22
 #include <stdio.h>
 #include <stdlib.h>
 
+void inteiroPositivo(int inteiro)
+{
+    int i, divisores = 0;
+    
+    for(i = 1; i < inteiro; i ++) 
+    {
+        if(inteiro % i == 0) divisores += i;
+    }
+    
+    if(divisores == inteiro) 
+    {
+        printf("%i é um número perfeito!", inteiro);
+    }
+    else 
+    {
+        printf("%i não é um número perfeito.", inteiro);
+    }
+}
+
 int main()
 {
-    int i, n, divisores = 0;
+    int inteiro;
     
     printf("Insira um número inteiro positivo:\n");
-    scanf("%i", &n);
+    scanf("%i", &inteiro);
     
-    for(i = 1; i < n; i ++) {
-        if(n % i == 0) {
-            divisores += i;
-        }
-    }
+    inteiroPositivo(inteiro);
     
-    printf("%i\n", divisores);
-    if(divisores == n) {
-        printf("%i é um número perfeito!", n);
-    }
-    else {
-        printf("%i não é um número perfeito.", n);
-    }
     return 0;
 }

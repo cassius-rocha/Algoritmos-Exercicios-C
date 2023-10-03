@@ -9,22 +9,30 @@ Exemplo: Dado 10010 a saída será 18, pois 1. 2^4 + 0. 2^3 + 0. 2^2 + 1. 2^1 + 
 #include <stdlib.h>
 #define BASE 10
 
-int main()
+int conversorBin(int binario)
 {
-    int bin, quociente, resto, decimal = 0, potenciaDe2 = 1;
+    int quociente, resto, decimal = 0, potenciaDe2 = 1;
     
-    printf("Insira um número binário:\n");
-    scanf("%i", &bin);
-    
-    while(bin > 0){
-        resto = bin % BASE;
-        quociente = bin / BASE;
+    while(binario > 0){
+        resto = binario % BASE;
+        quociente = binario / BASE;
         decimal += resto * potenciaDe2;
-        bin = quociente;
+        binario = quociente;
         potenciaDe2 *= 2;
     }
+    return decimal;
+}
+
+int main()
+{
+    int binario, decimal;
     
-    printf("%i", decimal);
+    printf("Insira um número binário:\n");
+    scanf("%i", &binario);
     
+    decimal = conversorBin(binario);
+    
+    printf("\nDecimal = %d.", decimal);
     return 0;
 }
+

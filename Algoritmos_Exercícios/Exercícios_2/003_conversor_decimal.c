@@ -8,13 +8,10 @@ Exemplo: Dado 18 a saída deverá ser 10010.
 #include <stdio.h>
 #define BASE 2
 
-int main()
+int conversorDecimal(int decimal)
 {
-    int resto, binario = 0, decimal, posicao = 1;
+    int resto, binario = 0, posicao = 1;
     
-    printf("Insira um número decimal:\n");
-    scanf("%d", &decimal);
-   
     while(decimal > 0)
     {
         resto = decimal % BASE;
@@ -22,9 +19,18 @@ int main()
         decimal = decimal / BASE;
         posicao *= 10;
     }
-    
-    printf("%d", binario);
+    return binario;
+}
 
+int main()
+{
+    int decimal, resultado;
+    
+    printf("Insira um número decimal:\n");
+    scanf("%d", &decimal);
+   
+    resultado = conversorDecimal(decimal);
+    printf("\nBinário = %d.", resultado);
 
     return 0;
 }
