@@ -4,7 +4,7 @@
 #define CPF_MAX 11
 
 // função para conversão da string
-void conversãoEntrada(char entrada[], int cpf[])
+void conversaoEntrada(char entrada[], int cpf[])
 {
     int i, k = CPF_MAX-1, tamanho = strlen(entrada);
     
@@ -78,7 +78,7 @@ int main()
     fgets(entrada, 20, stdin);
     
     // chamada da função que converte o cpf
-    conversãoEntrada(entrada, cpf);
+    conversaoEntrada(entrada, cpf);
     
 	// chamada das funções que validam o cpf
 	if((digitoVerificador(cpf, m1, 9)) == cpf[9] &&
